@@ -1,7 +1,7 @@
 # Example Usage
 ```javascript
-var myBarChart = new Chart(ctx, {
-    type: 'bar',
+var myRadarChart = new Chart(ctx, {
+    type: 'radar',
     data: data,
     options: options
 });

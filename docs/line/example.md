@@ -1,4 +1,4 @@
-### Example Usage
+# Example Usage
 ```javascript
 var myLineChart = new Chart(ctx, {
     type: 'line',

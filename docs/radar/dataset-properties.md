@@ -1,6 +1,6 @@
 # Dataset Properties
 
-The line chart allows a number of properties to be specified for each dataset. These are used to set display properties for a specific dataset. For example, the colour of a line is generally set this way.
+The radar chart allows a number of properties to be specified for each dataset. These are used to set display properties for a specific dataset. For example, the colour of a line is generally set this way.
 
 All point* properties can be specified as an array. If these are set to an array value, the first value applies to the first point, the second value to the second point, and so on.
 
@@ -43,20 +43,6 @@ Cap style of the line. See [MDN](https://developer.mozilla.org/en-US/docs/Web/AP
 ## borderJoinStyle
 **Type:** String
 Line joint style. See [MDN](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin)
-
-## cubicInterpolationMode
-**Type:** String
-Algorithm used to interpolate a smooth curve from the discrete data points. 
-
-Options are:
-* 'default'
-* 'monotone'. 
-
-The 'default' algorithm uses a custom weighted cubic interpolation, which produces pleasant curves for all types of datasets. 
-
-The 'monotone' algorithm is more suited to `y = f(x)` datasets : it preserves monotonicity (or piecewise monotonicity) of the dataset being interpolated, and ensures local extremums (if any) stay at input data points. 
-
-If left untouched (`undefined`), the global `options.elements.line.cubicInterpolationMode` property is used.
 
 ## fill
 **Type:** Boolean
@@ -117,15 +103,3 @@ Border width of point when hovered.
 ## pointHoverRadius
 **Type:** Number or Number[]
 The radius of the point when hovered.
-
-## showLine
-**Type:** `Boolean`
-If false, the line is not drawn for this dataset.
-
-## spanGaps
-**Type:** `Boolean`
-If true, lines will be drawn between points with no or null data. If false, points with `NaN` data will create a break in the line
-
-## steppedLine
-**Type:** `Boolean`
-If true, the line is shown as a stepped line and 'lineTension' will be ignored.
