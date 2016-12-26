@@ -21,7 +21,7 @@ The ID of the y axis to plot this dataset on. If not specified, this defaults to
 The fill color under the line. See [Colors](../colors/colors.md#chart-colors)
 
 ## borderColor
-**Type:** String
+**Type:** Color
 The color of the line. See [Colors](../colors/colors.md#chart-colors)
 
 ## borderWidth
