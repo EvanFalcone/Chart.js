@@ -6,11 +6,11 @@ All point* properties can be specified as an array. If these are set to an array
 
 ## Label
 **Type:** String
-The label for the dataset which appears in the legend and tooltips
+The label for the dataset which appears in the legend and tooltips.
 
 ## xAxisID
 **Type:** String
-The ID of the x axis to plot this dataset on. If not specified, this defaults to the ID of the first found x axis
+The ID of the x axis to plot this dataset on. If not specified, this defaults to the ID of the first found x axis.
 
 ## yAxisID
 **Type:** String
