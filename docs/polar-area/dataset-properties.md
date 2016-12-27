@@ -2,7 +2,7 @@
 
 The following options can be included in a polar area chart dataset to configure options for that specific dataset.
 
-## Label
+## label
 **Type:** String
 The label for the dataset which appears in the legend and tooltips.
 

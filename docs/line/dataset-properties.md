@@ -4,9 +4,9 @@ The line chart allows a number of properties to be specified for each dataset. T
 
 All point* properties can be specified as an array. If these are set to an array value, the first value applies to the first point, the second value to the second point, and so on.
 
-## Label
+## label
 **Type:** String
-The label for the dataset which appears in the legend and tooltips
+The label for the dataset which appears in the legend and tooltips.
 
 ## xAxisID
 **Type:** String

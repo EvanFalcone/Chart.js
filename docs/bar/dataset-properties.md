@@ -3,7 +3,7 @@ The bar chart allows a number of properties to be specified for each dataset. Th
 
 Some properties can be specified as an array. If these are set to an array value, the first value applies to the first bar, the second value to the second bar, and so on.
 
-## Label
+## label
 **Type:** String
 The label for the dataset which appears in the legend and tooltips.
 
