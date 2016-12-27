@@ -4,22 +4,22 @@ These are the customisation options specific to Pie & Doughnut charts. These opt
 
 ## cutoutPercentage
 **Type:** Number
-**Default:** 50 - for doughnut, 0 - for pie
+**Default:** `50` - for doughnut, `0` - for pie
 The percentage of the chart that is cut out of the middle.
 
 ## rotation
 **Type:** Number
-**Default:** -0.5 * Math.PI
+**Default:** `-0.5 * Math.PI`
 Starting angle to draw arcs from
 
 ##circumference
 **Type:** Number
-**Default:** 2 * Math.PI
+**Default:** `2 * Math.PI`
 Sweep to allow arcs to cover
 
 ## animateRotate
 **Type:** Boolean
-**Default:** true
+**Default:** `true`
 If true, the chart will animate in with a rotation animation. This property is in the `options.animation` object.
 
 ```javascript
@@ -32,7 +32,7 @@ options = {
 
 ## animateScale
 **Type:** Boolean
-**Default:** false
+**Default:** `false`
 If true, will animate scaling the chart from the center outwards. This property is in the `options.animation` object.
 
 ```javascript

@@ -4,7 +4,7 @@ The bar chart defines the following configuration options. These options are mer
 
 ## barPercentage
 **Type:** Number
-**Default:** 0.9
+**Default:** `0.9`
 Percent (0-1) of the available width each bar should be within the category percentage. 1.0 will take the whole category width and put the bars right next to each other. [Read More](#bar-chart-barpercentage-vs-categorypercentage)
 
 This setting applies to the axis configuration for a bar chart. If axes are added to the chart, this setting will need to be set for each new axis.
