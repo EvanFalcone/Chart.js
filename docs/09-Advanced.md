@@ -146,44 +146,6 @@ var meta = myChart.getDatasetMeta(0);
 var x = meta.data[0]._model.x
 ```
 
-### External Tooltips
-
-You can enable custom tooltips in the global or chart configuration like so:
-
-```javascript
-var myPieChart = new Chart(ctx, {
-	type: 'pie',
-	data: data,
-	options: {
-		tooltips: {
-			custom: function(tooltip) {
-				// tooltip will be false if tooltip is not visible or should be hidden
-				if (!tooltip) {
-					return;
-				}
-
-				// Otherwise, tooltip will be an object with all tooltip properties like:
-
-				// tooltip.caretSize
-				// tooltip.caretPadding
-				// tooltip.chart
-				// tooltip.cornerRadius
-				// tooltip.fillColor
-				// tooltip.font...
-				// tooltip.text
-				// tooltip.x
-				// tooltip.y
-				// tooltip.caretX
-				// tooltip.caretY
-				// etc...
-			}
-		}
-	}
-});
-```
-
-See `samples/tooltips/line-customTooltips.html` for examples on how to get started.
-
 ### Writing New Chart Types
 
 Chart.js 2.0 introduces the concept of controllers for each dataset. Like scales, new controllers can be written as needed.
