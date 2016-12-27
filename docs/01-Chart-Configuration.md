@@ -77,9 +77,6 @@ The following options are applicable to all charts. The can be set on the [globa
 
 Name | Type | Default | Description
 --- | --- | --- | ---
-responsive | Boolean | true | Resizes the chart canvas when its container does.
-responsiveAnimationDuration | Number | 0 | Duration in milliseconds it takes to animate to new size after a resize event.
-maintainAspectRatio | Boolean | true | Maintain the original canvas aspect ratio `(width / height)` when resizing
 events | Array[String] | `["mousemove", "mouseout", "click", "touchstart", "touchmove", "touchend"]` | Events that the chart should listen to for tooltips and hovering
 onClick | Function | null | Called if the event is of type 'mouseup' or 'click'. Called in the context of the chart and passed the event and an array of active elements
 legendCallback | Function | ` function (chart) { }` | Function to generate a legend. Receives the chart object to generate a legend from. Default implementation returns an HTML string.
