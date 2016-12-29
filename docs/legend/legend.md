@@ -148,3 +148,73 @@ var chartInstance = new Chart(ctx, {
 }
 });
 ```
+
+## Custom On Click Actions
+
+It can be common to want to trigger different behaviour when clicking an item in the legend. This can be easily achieved using a callback in the config object.
+
+The default legend click handler is:
+```javascript
+function(e, legendItem) {
+    var index = legendItem.datasetIndex;
+    var ci = this.chart;
+    var meta = ci.getDatasetMeta(index);
+
+    // See controller.isDatasetVisible comment
+    meta.hidden = meta.hidden === null? !ci.data.datasets[index].hidden : null;
+
+    // We hid a dataset ... rerender the chart
+    ci.update();
+}
+```
+
+Lets say we wanted instead to link the display of the first two datasets. We could change the click handler accordingly.
+
+```javascript
+let defaultLegendClickHandler = Chart.defaults.global.legend.onClick;
+let newLegendClickHandler = function (e, legendItem) {
+    var index = legendItem.datasetIndex;
+
+    if (index > 1) {
+        // Do the original logic
+        defaultLegendClickHandler(e, legendItem);
+    } else {
+        let ci = this.chart;
+        [ci.getDatasetMeta(0),
+         ci.getDatasetMeta(1)].forEach(function(meta) {
+            meta.hidden = meta.hidden === null? !ci.data.datasets[index].hidden : null;
+        });
+        ci.update();
+    }
+};
+
+let chart = new Chart(ctx, {
+    type: 'line',
+    data: data,
+    options: {
+        legend: {
+
+        }
+    }
+});
+```
+
+Now when you click the legend in this chart, the visibility of the first two datasets will be linked together.
+
+## HTML Legends
+
+Sometimes you need a very complex legend. In these cases, it makes sense to generate an HTML legend. Charts provide a `generateLegend()` method on their prototype that returns an HTML string for the legend.
+
+To configure how this legend is generated, you can change the `legendCallback` config property.
+
+```javascript
+let chart = new Chart(ctx, {
+    type: 'line',
+    data: data,
+    options: {
+        legendCallback: function(chart) {
+            // Return the HTML string here.
+        }
+    }
+});
+```
