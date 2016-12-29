@@ -80,66 +80,6 @@ Name | Type | Default | Description
 events | Array[String] | `["mousemove", "mouseout", "click", "touchstart", "touchmove", "touchend"]` | Events that the chart should listen to for tooltips and hovering
 onClick | Function | null | Called if the event is of type 'mouseup' or 'click'. Called in the context of the chart and passed the event and an array of active elements
 
-### Element Configuration
-
-The global options for elements are defined in `Chart.defaults.global.elements`.
-
-Options can be configured for four different types of elements: arc, lines, points, and rectangles. When set, these options apply to all objects of that type unless specifically overridden by the configuration attached to a dataset.
-
-#### Arc Configuration
-
-Arcs are used in the polar area, doughnut and pie charts. They can be configured with the following options. The global arc options are stored in `Chart.defaults.global.elements.arc`.
-
-Name | Type | Default | Description
---- | --- | --- | ---
-backgroundColor | Color | 'rgba(0,0,0,0.1)' | Default fill color for arcs. Inherited from the global default
-borderColor | Color | '#fff' | Default stroke color for arcs
-borderWidth | Number | 2 | Default stroke width for arcs
-
-#### Line Configuration
-
-Line elements are used to represent the line in a line chart. The global line options are stored in `Chart.defaults.global.elements.line`.
-
-Name | Type | Default | Description
---- | --- | --- | ---
-tension | Number | 0.4 | Default bezier curve tension. Set to `0` for no bezier curves.
-backgroundColor | Color | 'rgba(0,0,0,0.1)' | Default line fill color
-borderWidth | Number | 3 | Default line stroke width
-borderColor | Color | 'rgba(0,0,0,0.1)' | Default line stroke color
-borderCapStyle | String | 'butt' | Default line cap style. See [MDN](https://developer.mozilla.org/en/docs/Web/API/CanvasRenderingContext2D/lineCap)
-borderDash | Array | `[]` | Default line dash. See [MDN](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash)
-borderDashOffset | Number | 0.0 | Default line dash offset. See [MDN](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset)
-borderJoinStyle | String | 'miter' | Default line join style. See [MDN](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin)
-capBezierPoints | Boolean | true | If true, bezier control points are kept inside the chart. If false, no restriction is enforced.
-fill | Boolean or String | true | If true, the fill is assumed to be to zero. String values are 'zero', 'top', and 'bottom' to fill to different locations. If `false`, no fill is added
-stepped | Boolean | false | If true, the line is shown as a stepped line and 'tension' will be ignored
-
-#### Point Configuration
-
-Point elements are used to represent the points in a line chart or a bubble chart. The global point options are stored in `Chart.defaults.global.elements.point`.
-
-Name | Type | Default | Description
---- | --- | --- | ---
-radius | Number | 3 | Default point radius
-pointStyle | String | 'circle' | Default point style
-backgroundColor | Color | 'rgba(0,0,0,0.1)' | Default point fill color
-borderWidth | Number | 1 | Default point stroke width
-borderColor | Color | 'rgba(0,0,0,0.1)' | Default point stroke color
-hitRadius | Number | 1 | Extra radius added to point radius for hit detection
-hoverRadius | Number | 4 | Default point radius when hovered
-hoverBorderWidth | Number | 1 | Default stroke width when hovered
-
-#### Rectangle Configuration
-
-Rectangle elements are used to represent the bars in a bar chart. The global rectangle options are stored in `Chart.defaults.global.elements.rectangle`.
-
-Name | Type | Default | Description
---- | --- | --- | ---
-backgroundColor | Color | 'rgba(0,0,0,0.1)' | Default bar fill color
-borderWidth | Number | 0 | Default bar stroke width
-borderColor | Color | 'rgba(0,0,0,0.1)' | Default bar stroke color
-borderSkipped | String | 'bottom' | Default skipped (excluded) border for rectangle. Can be one of `bottom`, `left`, `top`, `right`
-
 ### Colors
 
 When supplying colors to Chart options, you can use a number of formats. You can specify the color as a string in hexadecimal, RGB, or HSL notations. If a color is needed, but not specified, Chart.js will use the global default color. This color is stored at `Chart.defaults.global.defaultColor`. It is initially set to 'rgba(0, 0, 0, 0.1)';

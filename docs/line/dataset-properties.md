@@ -59,8 +59,13 @@ The 'monotone' algorithm is more suited to `y = f(x)` datasets : it preserves mo
 If left untouched (`undefined`), the global `options.elements.line.cubicInterpolationMode` property is used.
 
 ## fill
-**Type:** Boolean
-If true, fill the area under the line. The line is filled to the baseline. If the y axis has a 0 value, the line is filled to that point. If the axis has only negative values, the line is filled to the highest value. If the axis has only positive values, it is filled to the lowest value.
+**Type:** Boolean or String
+If `true`, fill the area under the line. The line is filled to the baseline. If the y axis has a 0 value, the line is filled to that point. If the axis has only negative values, the line is filled to the highest value. If the axis has only positive values, it is filled to the lowest value.
+
+String values to fill to specific locations are:
+* `'zero'`
+* `'top'`
+* `'bottom'`
 
 ## lineTension
 **Type** Number
