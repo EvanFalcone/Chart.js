@@ -34,3 +34,16 @@ let options = {
     maintainAspectRatio: false
 };
 ```
+
+## onResize
+**Type:** Function
+**Default:** `null`
+Called when a resize occurs. Gets passed two arguments: the chart instance and the new size.
+
+```javascript
+let options = {
+    onResize: function(chart, newSize) {
+        // the chart is now at the new size. If you need to change configurations you could do it here.
+    }
+};)
+```

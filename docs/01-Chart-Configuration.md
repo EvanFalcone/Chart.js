@@ -79,16 +79,6 @@ Name | Type | Default | Description
 --- | --- | --- | ---
 events | Array[String] | `["mousemove", "mouseout", "click", "touchstart", "touchmove", "touchend"]` | Events that the chart should listen to for tooltips and hovering
 onClick | Function | null | Called if the event is of type 'mouseup' or 'click'. Called in the context of the chart and passed the event and an array of active elements
-legendCallback | Function | ` function (chart) { }` | Function to generate a legend. Receives the chart object to generate a legend from. Default implementation returns an HTML string.
-onResize | Function | null | Called when a resize occurs. Gets passed two arguments: the chart instance and the new size.
-
-### Layout Configuration
-
-The layout configuration is passed into the `options.layout` namespace. The global options for the chart layout is defined in `Chart.defaults.global.layout`.
-
-Name | Type | Default | Description
---- | --- | --- | ---
-padding | Number or Object | 0 | The padding to add inside the chart. If this value is a number, it is applied to all sides of the chart (left, top, right, bottom). If this value is an object, the `left` property defines the left padding. Similarly the `right`, `top`, and `bottom` properties can also be specified.
 
 ### Animation Configuration
 
