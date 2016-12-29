@@ -80,57 +80,6 @@ Name | Type | Default | Description
 events | Array[String] | `["mousemove", "mouseout", "click", "touchstart", "touchmove", "touchend"]` | Events that the chart should listen to for tooltips and hovering
 onClick | Function | null | Called if the event is of type 'mouseup' or 'click'. Called in the context of the chart and passed the event and an array of active elements
 
-### Animation Configuration
-
-The following animation options are available. The global options for are defined in `Chart.defaults.global.animation`.
-
-Name | Type | Default | Description
---- |:---:| --- | ---
-duration | Number | 1000 | The number of milliseconds an animation takes.
-easing | String | "easeOutQuart" | Easing function to use. Available options are: `'linear'`, `'easeInQuad'`, `'easeOutQuad'`, `'easeInOutQuad'`, `'easeInCubic'`, `'easeOutCubic'`, `'easeInOutCubic'`, `'easeInQuart'`, `'easeOutQuart'`, `'easeInOutQuart'`, `'easeInQuint'`, `'easeOutQuint'`, `'easeInOutQuint'`, `'easeInSine'`, `'easeOutSine'`, `'easeInOutSine'`, `'easeInExpo'`, `'easeOutExpo'`, `'easeInOutExpo'`, `'easeInCirc'`, `'easeOutCirc'`, `'easeInOutCirc'`, `'easeInElastic'`, `'easeOutElastic'`, `'easeInOutElastic'`, `'easeInBack'`, `'easeOutBack'`, `'easeInOutBack'`, `'easeInBounce'`, `'easeOutBounce'`, `'easeInOutBounce'`. See [Robert Penner's easing equations](http://robertpenner.com/easing/).
-onProgress | Function | none | Callback called on each step of an animation. Passed a single argument, an object, containing the chart instance and an object with details of the animation.
-onComplete | Function | none | Callback called at the end of an animation. Passed the same arguments as `onProgress`
-
-#### Animation Callbacks
-
-The `onProgress` and `onComplete` callbacks are useful for synchronizing an external draw to the chart animation. The callback is passed an object that implements the following interface. An example usage of these callbacks can be found on [Github](https://github.com/chartjs/Chart.js/blob/master/samples/animation/progress-bar.html). This sample displays a progress bar showing how far along the animation is.
-
-```javascript
-{
-    // Chart object
-    chartInstance,
-
-    // Contains details of the on-going animation
-    animationObject,
-}
-```
-
-#### Animation Object
-
-The animation object passed to the callbacks is of type `Chart.Animation`. The object has the following parameters.
-
-```javascript
-{
-    // Current Animation frame number
-    currentStep: Number,
-
-    // Number of animation frames
-    numSteps: Number,
-
-    // Animation easing to use
-    easing: String,
-
-    // Function that renders the chart
-    render: Function,
-
-    // User callback
-    onAnimationProgress: Function,
-
-    // User callback
-    onAnimationComplete: Function
-}
-```
-
 ### Element Configuration
 
 The global options for elements are defined in `Chart.defaults.global.elements`.
