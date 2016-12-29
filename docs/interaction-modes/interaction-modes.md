@@ -102,3 +102,25 @@ let chart = new Chart(ctx, {
     }
 })
 ```
+
+# Events Configuration Property
+**Type:** String[]
+**Default:**  `["mousemove", "mouseout", "click", "touchstart", "touchmove", "touchend"]`
+The `events` option defines the browser events that the chart should listen to for tooltips and hovering.
+
+For example, to have the chart only respond to click events, you could do
+```javascript
+let chart = new Chart(ctx, {
+    type: 'line',
+    data: data,
+    options: {
+        // This chart will not respond to mousemove, etc
+        events: ['click']
+    }
+});
+```
+
+# onClick Callback
+**Type:** Function
+**Default:** `null`
+Called if the event is of type 'mouseup' or 'click'. Called in the context of the chart and passed the event and an array of active elements
