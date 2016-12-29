@@ -211,17 +211,6 @@ var chartInstance = new Chart(ctx, {
 });
 ```
 
-### Hover Configuration
-
-The hover configuration is passed into the `options.hover` namespace. The global hover configuration is at `Chart.defaults.global.hover`.
-
-Name | Type | Default | Description
---- | --- | --- | ---
-mode | String | 'nearest' | Sets which elements appear in the tooltip. See [Interaction Modes](#interaction-modes) for details
-intersect | Boolean | true | if true, the hover mode only applies when the mouse position intersects an item on the chart
-animationDuration | Number | 400 | Duration in milliseconds it takes to animate hover style changes
-onHover | Function | null | Called when any of the events fire. Called in the context of the chart and passed the event and an array of active elements (bars, points, etc)
-
 ### Interaction Modes
 When configuring interaction with the graph via hover or tooltips, a number of different modes are available.
 
