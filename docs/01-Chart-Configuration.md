@@ -211,23 +211,6 @@ var chartInstance = new Chart(ctx, {
 });
 ```
 
-### Interaction Modes
-When configuring interaction with the graph via hover or tooltips, a number of different modes are available.
-
-The following table details the modes and how they behave in conjunction with the `intersect` setting
-
-Mode | Behaviour 
---- | --- 
-point | Finds all of the items that intersect the point
-nearest | Gets the item that is nearest to the point. The nearest item is determined based on the distance to the center of the chart item (point, bar). If 2 or more items are at the same distance, the one with the smallest area is used. If `intersect` is true, this is only triggered when the mouse position intersects an item in the graph. This is very useful for combo charts where points are hidden behind bars.
-single (deprecated) | Finds the first item that intersects the point and returns it. Behaves like 'nearest' mode with intersect = true.
-label (deprecated) | See `'index'` mode
-index | Finds item at the same index. If the `intersect` setting is true, the first intersecting item is used to determine the index in the data. If `intersect` false the nearest item is used to determine the index. 
-x-axis (deprecated) | Behaves like `'index'` mode with `intersect = false`
-dataset | Finds items in the same dataset. If the `intersect` setting is true, the first intersecting item is used to determine the index in the data. If `intersect` false the nearest item is used to determine the index.
-x | Returns all items that would intersect based on the `X` coordinate of the position only. Would be useful for a vertical cursor implementation. Note that this only applies to cartesian charts
-y | Returns all items that would intersect based on the `Y` coordinate of the position. This would be useful for a horizontal cursor implementation. Note that this only applies to cartesian charts.
-
 ### Animation Configuration
 
 The following animation options are available. The global options for are defined in `Chart.defaults.global.animation`.
