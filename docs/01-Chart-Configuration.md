@@ -90,40 +90,6 @@ Name | Type | Default | Description
 --- | --- | --- | ---
 padding | Number or Object | 0 | The padding to add inside the chart. If this value is a number, it is applied to all sides of the chart (left, top, right, bottom). If this value is an object, the `left` property defines the left padding. Similarly the `right`, `top`, and `bottom` properties can also be specified.
 
-
-### Title Configuration
-
-The title configuration is passed into the `options.title` namespace. The global options for the chart title is defined in `Chart.defaults.global.title`.
-
-Name | Type | Default | Description
---- | --- | --- | ---
-display | Boolean | false | Display the title block
-position | String | 'top' | Position of the title. Possible values are 'top', 'left', 'bottom' and 'right'.
-fullWidth | Boolean | true | Marks that this box should take the full width of the canvas (pushing down other boxes)
-fontSize | Number | 12 | Font size inherited from global configuration
-fontFamily | String | "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif" | Font family inherited from global configuration
-fontColor | Color | "#666" | Font color inherited from global configuration
-fontStyle | String | 'bold' | Font styling of the title.
-padding | Number | 10 | Number of pixels to add above and below the title text
-text | String | '' | Title text
-
-#### Example Usage
-
-The example below would enable a title of 'Custom Chart Title' on the chart that is created.
-
-```javascript
-var chartInstance = new Chart(ctx, {
-    type: 'line',
-    data: data,
-    options: {
-        title: {
-            display: true,
-            text: 'Custom Chart Title'
-        }
-    }
-})
-```
-
 ### Legend Configuration
 
 The legend configuration is passed into the `options.legend` namespace. The global options for the chart legend is defined in `Chart.defaults.global.legend`.
