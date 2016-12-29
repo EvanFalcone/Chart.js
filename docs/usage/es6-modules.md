@@ -2,5 +2,5 @@
 
 ```javascript
 import Chart from 'path/to/CHartjs/src/chart.js'
-let myChart = new Chart({...})
+let myChart = new Chart(ctx, {...})
 ```
